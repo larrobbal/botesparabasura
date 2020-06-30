@@ -17,7 +17,7 @@
 {
     
 }
-#catalogNav {
+#catalogNav, #catalogFooter{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     background-color: #212529;
@@ -411,4 +411,15 @@ a.article:hover {
 
 .quantity [class*='fa-']:hover {
   color: #455a64;
+}
+/*Footer*/
+#catalogFooter{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #212529;
+  color: #FFF;
+}
+
+#catalogFooter i.fa{
+  color: #000;
 }
