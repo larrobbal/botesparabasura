@@ -223,10 +223,16 @@ a.article:hover {
 /*
 * @subsection Shop
 */
+
+.catalog-subcategory
+{
+  margin-bottom: 2rem;
+}
 .catalog-content
 {
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 5rem;
 }
+
 .product {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -238,11 +244,22 @@ a.article:hover {
   margin-top: 15px;
   padding: 0 2rem;
 }
-
-.product .caption h6 {
-  color: #455a64;
+@media (min-width: 992px) {
+  .product .caption span 
+  {
+    font-size: 18px;
+    color: #000;
+    line-height: 1;
+  }
 }
-
+@media (max-width: 992px) {
+  .product .caption span 
+  {
+    font-size: 14px;
+    color: #000;
+    line-height: 1;
+  }
+}
 .product .caption .price + .price {
   margin-left: 15px;
 }
@@ -254,11 +271,12 @@ a.article:hover {
 }
 
 .product.tumbnail img {
-  width: 300px;
+  width: 200px;
   height: auto;
+  transition: 0.3s;
 }
 .product.tumbnail img:hover {
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 25px 0 rgba(0,0,0, 0.4);
 }
 
 .single-product span {
