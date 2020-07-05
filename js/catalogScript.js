@@ -57,7 +57,7 @@
     $('#closeCatalog').click(function(){
         window.top.close();
     });
-
+    
     //Sidebar overlay
     $(document).ready(function () {
         $("#sidebar").mCustomScrollbar({

@@ -26,10 +26,10 @@
 
 .cb-link {
   display: block;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  margin-bottom: 0.1em;
+  width: 50px;
+  height: 50px;
+  padding-top: .3rem;
+  margin: 0.1em 0;
   text-align: center;
   line-height: 40px;
   font-size: 17px;
@@ -60,8 +60,11 @@
 .left .cb-link:focus,
 .left .cb-link:active {
   color: #fff;
-  padding-left: 10px;
-  width: 50px;
+  padding-right: 10px;
+  margin-right: auto;
+  width: 100px;
+  text-decoration: none;
+  text-align: right;
 }
 .right .cb-link:hover,
 .right .cb-link:focus,
@@ -71,10 +74,10 @@
   width: 50px;
 }
 .left .cb-link.cb-hidden {
-  left: -40px;
+  left: -45px;
 }
 .right .cb-link.cb-hidden {
-  right: -40px;
+  right: -45px;
 }
 
 .cb-link.separated {
@@ -86,9 +89,16 @@
 .cb-link.toggle-bar:hover,
 .cb-link.toggle-bar:active {
   background: #ccc;
+  padding-top: .3rem;
   color: #000;
   border: 0;
   outline: 0;
-  padding: 0;
-  width: 40px;
+  width: 50px;
+  text-align: center;
+  padding-right: auto;
+}
+
+.social-float-layer
+{
+  display: none;
 }
