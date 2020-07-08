@@ -18,21 +18,27 @@
     
 }
 #catalogNav, #catalogFooter{
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background-color: #212529;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #f8f9fa;
   }
+#catalogNav
+{
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.5);
+}
 #catalogNav .navbar-toggler{
     padding: 0.75rem;
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 0.75rem;
     color: #fff;
     text-transform: uppercase;
-    background-color: #fed136;
+    background-color: #009e99;
     border: 0;
   }
 #catalogNav .navbar-brand{
-    color: #fed136;
+    color: #009e99;
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
     letter-spacing: 0.0625em;
@@ -44,20 +50,22 @@
 #catalogNav .navbar-nav .nav-item .nav-link{
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 0.95rem;
-    color: #fff;
+    color: #000;
     letter-spacing: 0.0625em;
     font-weight: 500;
     text-align: right;
   }
 #catalogNav .navbar-nav .nav-item .nav-link.active, #catalogNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fed136;
+    color: #009e99;
   }
   @media (min-width: 992px) {
     #catalogNav {
       padding-top: 0.7rem;
       padding-bottom: 0.7rem;
-      border: none;
-      background-color: #212529;
+      -webkit-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.5);
+      -moz-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.5);
+      box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.5);
+      background-color: #f8f9fa;
       transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
     }
     #catalogNav .navbar-brand {
@@ -69,16 +77,16 @@
       transition: height 0.3s ease-in-out;
     }
     #catalogNav.navbar-shrink {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      background-color: #212529;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      background-color: #f8f9fa;
     }
     #catalogNav.navbar-shrink .navbar-brand {
       font-size: 1.25em;
     }
     #catalogNav.navbar-shrink .navbar-brand svg,
   #catalogNav.navbar-shrink .navbar-brand img {
-      height: 2rem;
+      height: 2.5rem;
     }
     #catalogNav .navbar-nav .nav-item {
       margin-right: 1rem;
@@ -170,13 +178,13 @@
 
 #sidebar ul li a:hover {
     color: #FFF;
-    background: #feab10;
+    background: #009e99;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #feab10;
+    background: #009e99;
 }
 
 a[data-toggle="collapse"] {
