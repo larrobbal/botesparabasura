@@ -68,8 +68,7 @@
     $('a.card-a').click(
         function()
         {
-            
-            var id = 'div#'+$(this).attr('id');
+            var id = 'div#cat'+$(this).attr('id');
             if($(id).is(":hidden"))
             {
                 
