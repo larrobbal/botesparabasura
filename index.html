@@ -18,6 +18,9 @@
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css'/>
         <link rel="stylesheet" href="assets/vendor/socialfloating/css/socialfloating.css">
         <link rel="stylesheet" href="assets/vendor/wppfloating/css/floating-wpp.css">
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -30,9 +33,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#clients">Clientes</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10001">Botes de Plástico</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10002">Botes de Acero</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10003">Botes Metálicos</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10004">Botes de Fibra de Vidrio</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10005">Botes Ecológicos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contacto</a></li>
                     </ul>
                 </div>
@@ -41,50 +46,34 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="row px-4 justify-content-center" id="xl-menu">
-                    <div class="h2 text-uppercase text-center">En Botes para Basura tenemos los mejores productos</div>
-                    <div class="h5 text-uppercase" style="text-align: center;">Almacenaje de residuos, mobiliario y señalización</div>
-                </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-4 d-block align-items-center" id="category-list">
-                        <div class="card bg-transparent my-2 border-0">
-                            <a class="card-a" href="#" id="101"><div class="card-header mast-card-title">Botes para basura de plástico</div></a>
-                            <div class="card-body p-0 no-body-display" id="cat101" >
-                                <img class="card-img-bottom" src="assets/img/portfolio/botes-plastico-thumbnail.jpg" alt="Botes para basura de plástico">
-                            </div>
+                    <div class="col-lg-7 d-block align-items-center" id="category-list">
+                        <div class="row px-4 justify-content-center" id="xl-menu">
+                            <div class="h2 text-uppercase text-center">Tenemos los mejores productos para almacenar tus residuos</div>
+                            <div class="h5 text-uppercase" style="text-align: center;">Conoce nuestra amplia variedad en:</div>
                         </div>
-                        
-                        <div class="card bg-transparent my-2 border-0">
-                            <a class="card-a" href="#" id="201"><div class="card-header mast-card-title">Botes para basura metálicos</div></a>
-                            <div class="card-body p-0 no-body-display" id="cat201">
-                                <img class="card-img-bottom" src="assets/img/portfolio/botes-metal-thumbnail.jpg" alt="Botes para basura metálicos">
-                            </div>
-                        </div>
-
-                        <div class="card bg-transparent my-2 border-0">
-                            <a class="card-a" href="#" id="301"><div class="card-header mast-card-title">Otros productos</div></a>
-                            <div class="card-body p-0 no-body-display" id="cat301">
-                                <img class="card-img-bottom" src="assets/img/portfolio/botes-otros-thumbnail.jpg" alt="Otros productos">
-                            </div>
-                        </div>
-
-                        <div class="card bg-transparent my-2 border-0">
-                            <a class="card-a" href="#" id="401"><div class="card-header mast-card-title">Mobiliario</div></a>
-                            <div class="card-body p-0 no-body-display" id="cat401">
-                                <img class="card-img-bottom" src="assets/img/portfolio/botes-mobil-thumbnail.jpg" alt="Mobiliario">
-                            </div>
-                        </div>
-
-                        <div class="card bg-transparent my-2 border-0">
-                            <a class="card-a" href="#" id="501"><div class="card-header mast-card-title">Señalamiento Vial</div></a>
-                            <div class="card-body p-0 no-body-display" id="cat501">
-                                <img class="card-img-bottom" src="assets/img/portfolio/botes-vial-thumbnail.jpg" alt="Señalamiento Vial">
-                            </div>
-                        </div>
-
+                        <ul class="front-list">
+                            <li><a  class="hvr-sweep-to-right text-uppercase" href="#">Botes de Plástico</a></li>
+                            <li><a  class="hvr-sweep-to-right text-uppercase" href="#">Botes de Acero</a></li>
+                            <li><a  class="hvr-sweep-to-right text-uppercase" href="#">Botes Metálicos</a></li>
+                            <li><a  class="hvr-sweep-to-right text-uppercase" href="#">Botes de Fibra de Vidrio</a></li>
+                            <li><a  class="hvr-sweep-to-right text-uppercase" href="#">Botes Ecológicos</a></li>
+                        </ul>
                     </div>
-                    <div class="col-lg-8" id="sub-category">
-                        
+                    <div class="col-lg-5 p-4" id="slide-div">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                  <img src="assets/img/portfolio/slide1.png" class="d-block w-100" alt="Botes de plastico grandes">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="assets/img/portfolio/slide2.png" class="d-block w-100" alt="Botes de plastico ecológicos">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="assets/img/portfolio/slide3.png" class="d-block w-100" alt="Botes de plastico chicos">
+                              </div>
+                            </div>
+                          </div>
                     </div>
                 </div>
                 <div class="row justify-content-center py-5">
@@ -141,115 +130,52 @@
                 </div>
             </div>
         </header>
-        <!-- Services-->
-        <section class="page-section bg-light" id="services">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Servicios</h2>
-                    <p class="text-muted">En Botes para Basura contamos con diferentes servicios que se adaptan a tus necesidades:</p><br>
+        <!--Mini-Catalog-->
+        <section class="page-section bg-light" id="mini-catalog">
+          <div class="row justify-content-center" id="mini-catalog-tittle">
+            <h2>Nuestros principales productos</h2>
+          </div>
+          <div class="row flow-offset-1 text-center catalog-content justify-content-center" id="mini-catalog-content">
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 my-3">
+              <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/portfolio/thumbnail1.jpg" alt=""></a>
+                <div class="caption">
+                  <span>Botes de Plástico</span>
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Venta</h4>
-                        <p class="text-muted">Botes para basura de gran calidad. Metalicos y de plástico. Para interiores y exteriores. Productos para recolección.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-truck fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Renta</h4>
-                        <p class="text-muted">Renta de contenedores, señalización, mobiliario, y más productos.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Mantenimiento</h4>
-                        <p class="text-muted">Mantenimiento a nuestros productos. Reparación y cambio de mobiliario.</p>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 my-3">
+              <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/portfolio/thumbnail2.jpg" alt=""></a>
+                <div class="caption">
+                  <span>Botes de Acero</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 my-3">
+              <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/portfolio/thumbnail3.jpg" alt=""></a>
+                <div class="caption">
+                  <span>Botes Metálicos</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 my-3">
+              <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/portfolio/thumbnail4.jpg" alt=""></a>
+                <div class="caption">
+                  <span>Botes de Fibra de Vidrio</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 my-3">
+              <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/portfolio/thumbnail5.jpg" alt=""></a>
+                <div class="caption">
+                  <span>Botes Ecológicos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row flow-offset-1 text-center catalog-content justify-content-center">
+            <a class="btn btn-primary text-light">Ver más <i class="fas fa-arrow-right"></i></a>
+          </div>
         </section>
-        <!--About Us-->
-        <section class="page-section bg-light" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Nosotros</h2>
-                    <p class="text-muted">Nuestros misión, visión y valores siempre están enfocadas en el bienestar del cliente</p><br>
-                </div>
-                <!--Cuerpo carrusel-->
-                <div class="row text-center col-xl-12">
-                    <div id="carouselAboutUs" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <div class="container text-center d-block w-100">
-                                <img class="d-block w-100" src="assets/img/slider/quienes.jpg" alt="Second slide">
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="container text-center d-block w-100">
-                                <img class="d-block w-100" src="assets/img/slider/objetivo.jpg" alt="Second slide">
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="container text-center d-block w-100">
-                                <img class="d-block w-100" src="assets/img/slider/beneficios.jpg" alt="Second slide">
-                            </div>
-                          </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselAboutUs" role="button" data-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselAboutUs" role="button" data-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </div>
-                </div>
-            </div>
-        </section>
-        <!--Clients-->
-        <div class="py-5" id="clients">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Clientes</h2>
-                    <p class="text-muted">Nuestros clientes satisfechos son muestra de la calidad de nuestro trabajo</p><br>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 my-3 team-member">
-                        <a href="#!"><img class="img-fluid d-block mx-auto h-100 rounded-circle" src="assets/img/logos/logo1.png" alt="" /></a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 my-3 team-member">
-                        <a href="#!"><img class="img-fluid d-block mx-auto h-100 rounded-circle" src="assets/img/logos/logo2.png" alt="" /></a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 my-3 team-member">
-                        <a href="#!"><img class="img-fluid d-block mx-auto h-100 rounded-circle" src="assets/img/logos/logo3.png" alt="" /></a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 my-3 team-member">
-                        <a href="#!"><img class="img-fluid d-block mx-auto h-100 rounded-circle" src="assets/img/logos/logo4.png" alt="" /></a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 my-3 team-member">
-                        <a href="#!"><img class="img-fluid d-block mx-auto h-100 rounded-circle" src="assets/img/logos/logo5.png" alt="" /></a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 my-3 team-member">
-                        <a href="#!"><img class="img-fluid d-block mx-auto h-100 rounded-circle" src="assets/img/logos/logo6.png" alt="" /></a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 my-3 team-member">
-                        <a href="#!"><img class="img-fluid d-block mx-auto h-100 rounded-circle" src="assets/img/logos/logo7.png" alt="" /></a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4 my-3 team-member">
-                        <a href="#!"><img class="img-fluid d-block mx-auto h-100 rounded-circle" src="assets/img/logos/logo8.png" alt="" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">

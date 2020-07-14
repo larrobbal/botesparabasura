@@ -57,11 +57,11 @@
     $("a.cb-link.cb-anchor").hover(
         function() 
         {
-          $("#social-float-layer").removeClass("social-float-layer");
+          $("a.cb-link.cb-anchor span#social-float-layer").removeClass("social-float-layer");
         },
         function() 
         {
-          $("#social-float-layer").addClass("social-float-layer")
+          $("a.cb-link.cb-anchor span#social-float-layer").addClass("social-float-layer")
         }
     );
     /*Masthead cards show img*/

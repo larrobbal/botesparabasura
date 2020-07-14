@@ -125,13 +125,13 @@
           var sIcon;
           switch (icons) {
             case 'fontawesome4':
-              sIcon = '<span class="social-float-layer" id="social-float-layer">'+bs.message+'</span>'+'<span class="' + bs.icon + '" aria-hidden="true"></span>';
+              sIcon = '<span class="social-float-layer" id="social-float-layer">'+bs.message+' </span><span class="' + bs.icon + '" aria-hidden="true"> </span>';
               break;
             case 'semanticui':
-              sIcon = '<span class="social-float-layer" id="social-float-layer">'+bs.message+'</span>'+'<i class="' + bs.icon + ' icon"></i>';
+              sIcon = '<span class="social-float-layer" id="social-float-layer">'+bs.message+' </span>'+'<i class="' + bs.icon + ' icon"> </i>';
               break;
             default:
-              sIcon = '<span class="social-float-layer" id="social-float-layer">'+bs.message+'</span>'+'<span class="' + bs.icon + '" aria-hidden="true"></span>';
+              sIcon = '<span class="social-float-layer" id="social-float-layer"> '+bs.message+'</span>'+'<span class="' + bs.icon + '" aria-hidden="true"> </span>';
               break;
           }
           var button = '<a href="' + bs.link +
