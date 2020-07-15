@@ -10357,7 +10357,7 @@ header.masthead .masthead-heading
 }
 
 .product.tumbnail {
-  box-shadow: 0 5px 25px 0 transparent;
+  box-shadow: 0 5px 15px 0 transparent;
   transition: 0.3s linear;
   padding-top: 0;
 }
@@ -10368,7 +10368,7 @@ header.masthead .masthead-heading
   transition: 0.3s;
 }
 .product.tumbnail img:hover {
-  box-shadow: 0 5px 25px 0 rgba(0,0,0, 0.4);
+  box-shadow: 0 5px 10px 0 rgba(0,0,0, 0.4);
 }
 
 .single-product span {

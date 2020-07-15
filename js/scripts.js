@@ -64,7 +64,7 @@
           $("a.cb-link.cb-anchor span#social-float-layer").addClass("social-float-layer")
         }
     );
-    /*Masthead cards show img*/
+    /*Masthead cards show img
     $('a.card-a').click(
         function()
         {
@@ -83,5 +83,5 @@
             else
                 $(id).slideUp('300');
         }
-    );
+    );*/
 })(jQuery); // End of use strict

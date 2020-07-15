@@ -64,6 +64,7 @@
 
             $popup.addClass('floating-wpp-popup');
             $header.addClass('floating-wpp-head');
+            $header.addClass('align-items-center');
             $popupMessage.addClass('floating-wpp-message');
             $inputMessage.addClass('floating-wpp-input-message');
             $btnSend.addClass('floating-wpp-btn-send');

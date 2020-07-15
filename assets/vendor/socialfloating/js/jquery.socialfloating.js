@@ -160,4 +160,18 @@
       }, 250) );
     });
   });
+
+  $(function()
+    {
+        var divSocial=$('div#socialfloating');
+        divSocial.find('a.cb-anchor').mouseenter(function()
+        {
+            $(this).find('span#social-float-layer').attr('class','');
+        })
+        .mouseleave(function()
+        {
+            $(this).find('span#social-float-layer').attr('class','social-float-layer');
+        });
+    });
+    
  }( jQuery ));
