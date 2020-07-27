@@ -231,7 +231,18 @@ a.article:hover {
 /*
 * @subsection Shop
 */
+/********Modal Style***********/
+.table-modal-product tr
+{
+  border-collapse:separate;
+  border-spacing:0 15px;
+}
 
+.table-modal-product tr td
+{
+  padding: 10px 10px;
+}
+/******************************/
 .catalog-subcategory
 {
   margin-bottom: 2rem;

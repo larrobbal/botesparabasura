@@ -155,9 +155,9 @@
       $.data( this, "scrollCheck", setTimeout(function() {
         var nTop = $(window).scrollTop() + parseInt(el.attr('data-top'));
         el.animate({
-          top : nTop
-        }, 500);
-      }, 250) );
+          top : nTop+50
+        }, 250);
+      }, 400) );
     });
   });
 

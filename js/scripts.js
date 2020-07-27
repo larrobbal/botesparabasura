@@ -49,11 +49,25 @@
             $("#mainNav").removeClass("navbar-shrink");
         }
     };
+    var showInfo = function()
+    {
+        if($("#mainNav").offset().top > 100) 
+        {
+            if($( window ).width()>991)
+                $('#contactInfo').slideUp('300');
+        }
+        else
+        {
+            if($( window ).width()>991)
+                $('#contactInfo').slideDown('300');
+        }
+    };
     // Collapse now if page is not at top
     navbarCollapse();
+    showInfo();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
-
+    $(window).scroll(showInfo);
     $("a.cb-link.cb-anchor").hover(
         function() 
         {

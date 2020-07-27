@@ -24,7 +24,18 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top d-block" id="mainNav">
+            <div class="container justify-content-end" id="contactInfo">
+              <b>Contacto: </b>
+              <span class="fa-stack fa-1x ml-3">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+              </span>(55)4602 9795
+              <span class="fa-stack fa-1x ml-3">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>contacto@botesparabasura.com
+            </div>
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="logo" src="assets/img/Logo-transparente.png" alt="Botes para Basura" /></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,13 +43,24 @@
                     <i class="fas fa-bars ml-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10001">Botes de Plástico</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10002">Botes de Acero</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10003">Botes Metálicos</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10004">Botes de Fibra de Vidrio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10005">Botes Ecológicos</a></li>
+                    <ul class="navbar-nav text-uppercase ml-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat10001">Botes para basura de plastico</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat20001">Botes para basura de metal</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat30001">Botes de Fibra de Vidrio</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger cat" href="#mini-catalog" id="cat40001">Otros productos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contacto</a></li>
+                        <li class="nav-item-info">
+                          <div class="container justify-content-center align-items-center item-info d-block">
+                            <div class="row align-items-center"><span class="fa-stack fa-1x ml-3">
+                              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+                            </span>(55)4602 9795</div>
+                            <div class="row align-items-center"><span class="fa-stack fa-1x ml-3">
+                              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>contacto@botesparabasura.com</div>
+                          </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -53,11 +75,10 @@
                             <div class="h5 text-uppercase" style="text-align: center;">Conoce nuestra amplia variedad en:</div>
                         </div>
                         <ul class="front-list" id="front-cat-list">
-                            <li><a class="hvr-sweep-to-right text-uppercase js-scroll-trigger cat" href="#mini-catalog" id="cat10001">Botes de Plástico</a></li>
-                            <li><a class="hvr-sweep-to-right text-uppercase js-scroll-trigger cat" href="#mini-catalog" id="cat10002">Botes de Acero</a></li>
-                            <li><a class="hvr-sweep-to-right text-uppercase js-scroll-trigger cat" href="#mini-catalog" id="cat10003">Botes Metálicos</a></li>
-                            <li><a class="hvr-sweep-to-right text-uppercase js-scroll-trigger cat" href="#mini-catalog" id="cat10004">Botes de Fibra de Vidrio</a></li>
-                            <li><a class="hvr-sweep-to-right text-uppercase js-scroll-trigger cat" href="#mini-catalog" id="cat10005">Botes Ecológicos</a></li>
+                            <li><a class="hvr-sweep-to-right text-uppercase js-scroll-trigger cat" href="#mini-catalog" id="cat10001">Botes para basura de plastico</a></li>
+                            <li><a class="hvr-sweep-to-right text-uppercase js-scroll-trigger cat" href="#mini-catalog" id="cat20001">Botes para basura de metal</a></li>
+                            <li><a class="hvr-sweep-to-right text-uppercase js-scroll-trigger cat" href="#mini-catalog" id="cat30001">Botes de Fibra de Vidrio</a></li>
+                            <li><a class="hvr-sweep-to-right text-uppercase js-scroll-trigger cat" href="#mini-catalog" id="cat40001">Otros productos</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-5 p-4" id="slide-div">
@@ -132,49 +153,44 @@
         </header>
         <!--Mini-Catalog-->
         <section class="page-section bg-light" id="mini-catalog">
-          <div class="row justify-content-center" id="mini-catalog-tittle">
-            <h2 class="text-uppercase">Nuestros principales productos</h2>
-          </div>
-          <div class="row justify-content-center" id="mini-catalog-category"><h3 class="text-uppercase"></h3></div>
-          <div class="row flow-offset-1 text-center catalog-content justify-content-center" id="mini-catalog-content">
-            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 my-3">
-              <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/portfolio/thumbnail1.jpg" alt=""></a>
-                <div class="caption">
-                  <span>Botes de Plástico</span>
+          <div class="row justify-content-center d-block">
+            <div class="row px-4 justify-content-center" id="xl-menu">
+              <div class="h2 text-uppercase text-center">Nuestros principales productos</div>
+            </div>
+            <div class="row justify-content-center" id="mini-catalog-category"><h3 class="text-uppercase"></h3></div>
+            <div class="row flow-offset-1 text-center catalog-content justify-content-center" id="mini-catalog-content">
+              <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 my-3">
+                <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/catalog/category/thumbnail1.jpg" alt=""></a>
+                  <div class="caption">
+                    <span>Botes para basura de plastico</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 my-3">
+                <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/catalog/category/thumbnail2.jpg" alt=""></a>
+                  <div class="caption">
+                    <span>Botes para basura de metal</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 my-3">
+                <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/catalog/category/thumbnail3.jpg" alt=""></a>
+                  <div class="caption">
+                    <span>Botes de Fibra de Vidrio</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 my-3">
+                <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/catalog/category/thumbnail4.jpg" alt=""></a>
+                  <div class="caption">
+                    <span>Otros Productos</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 my-3">
-              <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/portfolio/thumbnail2.jpg" alt=""></a>
-                <div class="caption">
-                  <span>Botes de Acero</span>
-                </div>
-              </div>
+            <div class="row flow-offset-1 text-center catalog-content justify-content-center">
+              <a class="btn btn-primary text-light" href="catalogo.html">Ver más <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 my-3">
-              <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/portfolio/thumbnail3.jpg" alt=""></a>
-                <div class="caption">
-                  <span>Botes Metálicos</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 my-3">
-              <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/portfolio/thumbnail4.jpg" alt=""></a>
-                <div class="caption">
-                  <span>Botes de Fibra de Vidrio</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 my-3">
-              <div class="product tumbnail thumbnail-3"><a href="#"><img class="img-fluid h-100 rounded" src="assets/img/portfolio/thumbnail5.jpg" alt=""></a>
-                <div class="caption">
-                  <span>Botes Ecológicos</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row flow-offset-1 text-center catalog-content justify-content-center">
-            <a class="btn btn-primary text-light" href="catalogo.html">Ver más <i class="fas fa-arrow-right"></i></a>
           </div>
         </section>
         <!-- Contact-->
