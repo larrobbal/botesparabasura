@@ -33,126 +33,8 @@
                 <div class="sidebar-header">
                     <h3>Menú</h3>
                 </div>
-                <ul class="list-unstyled components">
+                <ul class="list-unstyled components" id="sidebar-options">
                     <p>Categorias</p>
-                    <li>
-                        <a href="#botesplastico" data-toggle="collapse" aria-expanded="false">Botes para basura de plástico</a>
-                        <ul class="collapse list-unstyled" id="botesplastico">
-                            <li>
-                                <a href="#">Botes para RPBI-Desechos hospitales</a>
-                            </li>
-                            <li>
-                                <a href="#">Botes de basura con pedal</a>
-                            </li>
-                            <li>
-                                <a href="#">Botes para basura chicos</a>
-                            </li>
-                            <li>
-                                <a href="#">Contenedores para basura grandes</a>
-                            </li>
-                            <li>
-                                <a href="#">Botes para basura reciclable</a>
-                            </li>
-                            <li>
-                                <a href="#">Carros barrenderos</a>
-                            </li>
-                            <li>
-                                <a href="#">Estaciones de reciclaje</a>
-                            </li>
-                            <li>
-                                <a href="#">Contenedor para desechos caninos</a>
-                            </li>
-                            <li>
-                                <a href="#">Contenedor para pilas</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#botesmetal" data-toggle="collapse" aria-expanded="false">Botes para basura metalicos</a>
-                        <ul class="collapse list-unstyled" id="botesmetal">
-                            <li>
-                                <a href="#">Botes para basura en acero inoxidable</a>
-                            </li>
-                            <li>
-                                <a href="#">Cestos para basura en acero inoxidable</a>
-                            </li>
-                            <li>
-                                <a href="#">Botes para basura en acero inoxidable con pedal</a>
-                            </li>
-                            <li>
-                                <a href="#">Botes para basura ecológicos en acero inoxidable</a>
-                            </li>
-                            <li>
-                                <a href="#">Botes para basura metalicos para exterior</a>
-                            </li>
-                            <li>
-                                <a href="#">Ceniceros y portaextintores</a>
-                            </li>
-                            <li>
-                                <a href="#">Contenedores metalicos grandes</a>
-                            </li>
-                            <li>
-                                <a href="#">Contenedor para Fast Food</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#otros" data-toggle="collapse" aria-expanded="false">Otros productos</a>
-                        <ul class="collapse list-unstyled" id="otros">
-                            <li>
-                                <a href="#">Productos de contingencia</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#mobiliario" data-toggle="collapse" aria-expanded="false">Mobiliario</a>
-                        <ul class="collapse list-unstyled" id="mobiliario">
-                            <li>
-                                <a href="#">Aparcabicis y Biciestacionamientos</a>
-                            </li>
-                            <li>
-                                <a href="#">Bancas y mesas metálicas</a>
-                            </li>
-                            <li>
-                                <a href="#">Bancas y mesas de concreto</a>
-                            </li>
-                            <li>
-                                <a href="#">Bancas y mesas de madera</a>
-                            </li>
-                            <li>
-                                <a href="#">Bolardos Picobas</a>
-                            </li>
-                            <li>
-                                <a href="#">Macetas</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#vial" data-toggle="collapse" aria-expanded="false">Señalamiento Vial</a>
-                        <ul class="collapse list-unstyled" id="vial">
-                            <li>
-                                <a href="#">Señalamientos</a>
-                            </li>
-                            <li>
-                                <a href="#">Barreras viales</a>
-                            </li>
-                            <li>
-                                <a href="#">Boyas</a>
-                            </li>
-                            <li>
-                                <a href="#">Conos</a>
-                            </li>
-                            <li>
-                                <a href="#">Topes</a>
-                            </li>
-                            <li>
-                                <a href="#">Vialetas</a>
-                            </li>
-                            <li>
-                                <a href="#">Trafitambos</a>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -164,14 +46,14 @@
                     <button type="button" class="btn btn-link" id="sidebarCollapse" style="text-decoration: none;">
                         <i class="fa fa-bars"></i><span class="mx-1">MENÚ</span>
                     </button>
-                    <button class="btn btn-link d-inline-block d-lg-none ml-auto" type="button" aria-expanded="false" aria-label="Inicio">
+                    <button class="btn btn-link d-inline-block d-lg-none ml-auto" type="button" aria-expanded="false" aria-label="Inicio" onclick="homeCatalog();">
                         <i class="fa fa-home"></i>
                     </button>
                     <div class="brand-wraper ml-auto justify-content-center"><a class="navbar-brand" href="index.html"><img src="assets/img/Logo-transparente.png" class="logo" alt="Botes para Basura"></a></div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto text-uppercase">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Inicio</a>
+                                <a class="nav-link" href="#" onclick="homeCatalog();">Inicio</a>
                             </li>
                         </ul>
                     </div>
@@ -179,8 +61,8 @@
             </nav>
             <!--Catalogo-->
             <section id="catalogo" class="page-section">
-                <h2 class="text-center py-3 catalog-category">Nuestros Productos</h1>
-                <div class="text-center catalog-subcategory">Selecciona la categoría que deseas visitar</div>
+                <h2 class="text-center py-3 catalog-category-title">Nuestros Productos</h1>
+                <div class="text-center catalog-subcategory-title">Selecciona la categoría que deseas visitar</div>
                 <div class="row flow-offset-1 text-center catalog-content" id="catalog-content">
                 </div>
             </section>
@@ -232,9 +114,9 @@
         <script src="assets/mail/jqBootstrapValidation.js"></script>
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
-        <script src="js/CatalogScript.js"></script>
         <script src="assets/vendor/socialfloating/js/jquery.socialfloating.js"></script>
         <script src="assets/vendor/socialfloating/js/socialfloating.js"></script>
         <script src="assets/vendor/wppfloating/js/floating-wpp.js"></script>
+        <script src="js/catScript.js"></script>
     </body>
 </html>

@@ -53,10 +53,6 @@
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
-
-    $('#closeCatalog').click(function(){
-        window.top.close();
-    });
     
     //Sidebar overlay
     $(document).ready(function () {
@@ -88,6 +84,7 @@
         var xhr = new XMLHttpRequest();
         var catalogContent = $('div#catalog-content');
         var catalog = document.getElementById('catalog-content');
+        var sidebar = document.getElementById('sidebar-options');
         var myObj;
         var data={};
         var txt="";
@@ -110,6 +107,48 @@
                     divElement.setAttribute('class','col-sm-6 col-md-4 col-lg-3 col-xl-3 my-3');
                     divElement.innerHTML='<div class="product tumbnail thumbnail-3"><a class="catalog-category" id="'+element.idCategoria+'" href="#" onclick="catalog(event,this,\''+element.nombreCategoria+'\');"><img class="img-fluid h-100 rounded catalog-item" src="assets/img/catalog/category/'+element.imagenCategoria+'.jpg" alt="'+element.nombreCategoria+'"></a><div class="caption"><span>'+element.nombreCategoria+'</span> </div></div>';
                     catalog.appendChild(divElement);
+                });
+                myObj.forEach(element => 
+                {
+                    var listCategorySidebar = document.createElement('li');
+                    listCategorySidebar.setAttribute('class','d-inline');
+                    var aCategory = document.createElement('a');
+                    var viewCategory = document.createElement('a');
+                    var listSubcategorySidebar = document.createElement('ul');
+                    aCategory.setAttribute('data-toggle','collapse');
+                    aCategory.setAttribute('aria-expanded','false');
+                    aCategory.setAttribute('href','#cat'+element.idCategoria);
+                    viewCategory.setAttribute('class','catalog-category');
+                    viewCategory.setAttribute('id',element.idCategoria);
+                    viewCategory.setAttribute('href','#');
+                    viewCategory.setAttribute('onclick','catalog(event,this,\''+element.nombreCategoria+'\');');
+                    viewCategory.innerHTML='<i class="fas fa-eye"></i>';
+                    aCategory.innerHTML=element.nombreCategoria;
+                    listCategorySidebar.appendChild(viewCategory);
+                    listSubcategorySidebar.setAttribute('class','collapse list-unstyled');
+                    listSubcategorySidebar.setAttribute('id','cat'+element.idCategoria);
+                    $.ajax({
+                        data: {"categoria" : element.idCategoria},
+                        type: "POST",
+                        dataType: "json",
+                        url: "assets/php/productos.php",
+                    })
+                     .done(function( data, textStatus, jqXHR ) {
+                        data.forEach(element => 
+                        {
+                            var subcategory = document.createElement('li');
+                            subcategory.innerHTML='<a class="catalog-subcategory" id="'+element.idSubcategoria+'" href="#" onclick="catalog(event,this,\''+element.nombreSubcategoria+'\');">'+element.nombreSubcategoria+'</a>';
+                            listSubcategorySidebar.appendChild(subcategory);
+                        });
+                     })
+                     .fail(function( jqXHR, textStatus, errorThrown ) {
+                         if ( console && console.log ) {
+                             console.log( "La solicitud a fallado: " +  textStatus);
+                         }
+                    });
+                    listCategorySidebar.appendChild(aCategory);
+                    listCategorySidebar.appendChild(listSubcategorySidebar);
+                    sidebar.appendChild(listCategorySidebar);
                 });
             }
         }
@@ -137,8 +176,8 @@ function loadSubcategory(category,name)
 {
     var catalogContent = $('div#catalog-content');
     var catalog = document.getElementById('catalog-content');
-    $('.catalog-category').text(name);
-    $('.catalog-subcategory').text('Selecciona la subcategoría que desas visitar');
+    $('.catalog-category-title').text(name);
+    $('.catalog-subcategory-title').text('Selecciona la subcategoría que desas visitar');
     $.ajax({
         data: {"categoria" : category},
         type: "POST",
@@ -166,8 +205,8 @@ function loadProducts(subcategory,name)
 {
     var catalogContent = $('div#catalog-content');
     var catalog = document.getElementById('catalog-content');
-    $('.catalog-category').append(" - "+name);
-    $('.catalog-subcategory').text('Selecciona un producto para conocerlo a detalle');
+    $('.catalog-category-title').text(name);
+    $('.catalog-subcategory-title').text('Selecciona un producto para conocerlo a detalle');
     $.ajax({
         data: {"subcategoria" : subcategory},
         type: "POST",
@@ -196,6 +235,8 @@ function showModal(idproducto,name)
     var modalTitle = document.getElementById('modal-product-title');
     modalTitle.innerHTML=name;
     var modalBody = $('#row-modal');
+    var aux="";
+    var cont=0;
     $.ajax({
         data: {"idProducto" : idproducto},
         type: "POST",
@@ -219,12 +260,15 @@ function showModal(idproducto,name)
             divInfo.setAttribute('class','col-md-7');
             divInfo.setAttribute('id','info-modal-product');
             divImg.innerHTML='<img class="img-fluid w-100 rounded" src="assets/img/catalog/product/modal/'+element.imagen+'.jpg" alt="'+name+'">';
-            tablaBody.innerHTML='<tr><td>'+heading[0]+'</td><td>'+element.descripcion+'</td></tr><tr><td>'+heading[1]+'</td><td>'+element.acabado+'</td></tr>'+
-                                '<tr><td>'+heading[2]+'</td><td>'+element.material+'</td></tr><tr><td>'+heading[3]+'</td><td>'+element.calibre+'</td></tr>'+
-                                '<tr><td>'+heading[4]+'</td><td>'+element.capacidad+'</td></tr><tr><td>'+heading[5]+'</td><td>'+element.colores+'</td></tr>'+
-                                '<tr><td>'+heading[6]+'</td><td>'+element.anclaje+'</td></tr><tr><td>'+heading[7]+'</td><td>'+element.vaciado+'</td></tr>'+
-                                '<tr><td>'+heading[8]+'</td><td>'+element.medidas+'</td></tr><tr><td>'+heading[9]+'</td><td>'+element.contenedor+'</td></tr>'+
-                                '<tr><td>'+heading[10]+'</td><td>'+element.letrero+'</td></tr><tr><td>'+heading[11]+'</td><td>'+element.adicional+'</td></tr>';
+            for(var i in element)
+            {
+                if(i!='imagen')
+                {
+                    aux=aux+'<tr><td>'+heading[cont]+'</td><td>'+element[i]+'</td></tr><tr><td>';
+                    cont+=1;
+                }
+            }
+            tablaBody.innerHTML=aux;
             tablaModal.appendChild(tablaBody);
             divInfo.appendChild(tablaModal);
             var rowModal = document.getElementById('row-modal');
@@ -238,4 +282,37 @@ function showModal(idproducto,name)
              console.log( "La solicitud a fallado: " +  textStatus);
          }
     });
+}
+function homeCatalog() 
+{
+    var xhr = new XMLHttpRequest();
+    var catalogContent = $('div#catalog-content');
+    var catalog = document.getElementById('catalog-content');
+    $('.catalog-category-title').text('Nuestros Productos');
+    $('.catalog-subcategory-title').text('Selecciona la categoría que deseas visitar');
+    var myObj;
+    var data={};
+    var txt="";
+    data['cat']=true;
+    var json_string = JSON.stringify(data);
+    xhr.open('POST',"assets/php/productos.php",true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.send(json_string);
+
+    xhr.onreadystatechange = function()
+    {
+        if(this.readyState == 4 && this.status == 200)
+        {
+            txt += this.responseText;
+            myObj = JSON.parse(this.responseText);
+            catalogContent.empty();
+            myObj.forEach(element => 
+            {
+                var divElement = document.createElement('div');
+                divElement.setAttribute('class','col-sm-6 col-md-4 col-lg-3 col-xl-3 my-3');
+                divElement.innerHTML='<div class="product tumbnail thumbnail-3"><a class="catalog-category" id="'+element.idCategoria+'" href="#" onclick="catalog(event,this,\''+element.nombreCategoria+'\');"><img class="img-fluid h-100 rounded catalog-item" src="assets/img/catalog/category/'+element.imagenCategoria+'.jpg" alt="'+element.nombreCategoria+'"></a><div class="caption"><span>'+element.nombreCategoria+'</span> </div></div>';
+                catalog.appendChild(divElement);
+            });
+        }
+    }
 }

@@ -99,10 +99,10 @@
 * @Sidebar Style
 */
 #sidebar {
-    width: 250px;
+    width: 350px;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -350px;
     height: 100vh;
     z-index: 999;
     background: #212529;
@@ -112,7 +112,20 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
     z-index: 1020;
 }
-
+#sidebar ul li a.catalog-category
+{
+  border-bottom: none;
+  position: absolute;
+  right: 0px;
+  display: inline;
+  margin-left: auto;
+  z-index: 1024;
+  padding: 10px 10px 9px 10px;
+}
+#sidebar ul li a.catalog-category:hover
+{
+  border-bottom: .1px solid #FFF;
+}
 #sidebar.active {
     left: 0;
     z-index: 1020;
@@ -240,7 +253,7 @@ a.article:hover {
 
 .table-modal-product tr td
 {
-  padding: 10px 10px;
+  padding: 5px 10px;
 }
 /******************************/
 .catalog-subcategory
