@@ -7,7 +7,8 @@ $.socialfloating({
       { message: 'E-mail ', icon: 'envelope', enabled: true, link: 'mailto:ventas@botesparabasura.com', color: '#009e99' }
     ],
     [
-      { message: 'Lista', icon: 'file alternate', enabled: true, link: 'assets/docs/lista_precios.pdf', color: '#FF8000' }
+      { message: 'Lista', icon: 'file alternate', enabled: true, link: 'assets/docs/lista_precios.pdf', color: '#FF8000' },
+      { message: 'Tienda', icon: 'shopping cart', enabled: true, link: 'https://botesparabasuracom.mercadoshops.com.mx', color: '#FF8000' }
     ],
     [
       { message: 'Facebook ', icon: 'facebook', enabled: true, link: 'https://www.facebook.com/pages/mycompany', color: '#3b5998' },
