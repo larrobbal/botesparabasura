@@ -231,7 +231,7 @@ function loadProducts(subcategory,name)
 }
 function showModal(idproducto,name)
 {
-    var heading = ['Descripcion:','Acabado:','Material:','Calibre:','Capacidad:','Colores:','Anclaje:','Vaciado:','Medidas:','Contenedor:','Letrero:','Adicional:'];
+    var heading = ['Descripcion:','Linea:','Acabado:','Material:','Calibre:','Capacidad:','Colores:','Anclaje:','Vaciado:','Largo Total:','Ancho Total:','Alto Total:','Diametro Principal:','Largo (Contenedor):','Ancho (Contenedor):','Alto (Contenedor):','Diametro (Contenedor):','Largo (Letrero):','Alto (Letrero):','Adicional:'];
     var modalTitle = document.getElementById('modal-product-title');
     modalTitle.innerHTML=name;
     var modalBody = $('#row-modal');
@@ -259,7 +259,7 @@ function showModal(idproducto,name)
             divImg.setAttribute('id','image-modal-product');
             divInfo.setAttribute('class','col-md-7');
             divInfo.setAttribute('id','info-modal-product');
-            divImg.innerHTML='<img class="img-fluid w-100 rounded" src="assets/img/catalog/product/modal/'+element.imagen+'.jpg" alt="'+name+'">';
+            divImg.innerHTML='<img class="img-fluid w-100 rounded" src="assets/img/catalog/product/'+element.imagen+'.jpg" alt="'+name+'">';
             for(var i in element)
             {
                 if(i!='imagen')

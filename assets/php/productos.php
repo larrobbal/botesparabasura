@@ -40,12 +40,13 @@
             $idProducto=$_POST['idProducto'];
         else
             $idProducto=$response['idProducto'];
-        $query="SELECT descripcion,acabado,material,calibre,capacidad,colores,anclaje,vaciado,medidas,contenedor,letrero,adicional,imagen FROM descripcion_producto where fk_idProducto = '$idProducto'";
+        $query="SELECT descripcion,linea,acabado,material,calibre,capacidad,colores,anclaje,vaciado,largoTotal,anchoTotal,altoTotal,diametroTotal,largoCont,anchoCont,altoCont,diametroCont,largoLetrero,altoLetrero,adicional,imagen FROM descripcion_producto where fk_idProducto = '$idProducto'";
         $result_query = $data_source->exeConsulta($query);
         foreach($result_query as $row)
         {
-            $result[]=Array('descripcion'=>$row['descripcion'],'acabado'=>$row['acabado'],'material'=>$row['material'],'calibre'=>$row['calibre'],'capacidad'=>$row['capacidad'],'colores'=>$row['colores'],'anclaje'=>$row['anclaje'],
-                            'vaciado'=>$row['vaciado'],'medidas'=>$row['medidas'],'contenedor'=>$row['contenedor'],'letrero'=>$row['letrero'],'adicional'=>$row['adicional'],'imagen'=>$row['imagen']);
+            $result[]=Array('descripcion'=>$row['descripcion'],'linea'=>$row['linea'],'acabado'=>$row['acabado'],'material'=>$row['material'],'calibre'=>$row['calibre'],'capacidad'=>$row['capacidad'],'colores'=>$row['colores'],'anclaje'=>$row['anclaje'],
+                            'vaciado'=>$row['vaciado'],'largoTotal'=>$row['largoTotal'],'anchoTotal'=>$row['anchoTotal'],'altoTotal'=>$row['altoTotal'],'diametroTotal'=>$row['diametroTotal'],'largoCont'=>$row['largoCont'],'anchoCont'=>$row['anchoCont'],
+                            'altoCont'=>$row['altoCont'],'diametroCont'=>$row['diametroCont'],'largoLetrero'=>$row['largoLetrero'],'altoLetrero'=>$row['altoLetrero'],'adicional'=>$row['adicional'],'imagen'=>$row['imagen']);
         }
         $json=json_encode($result);
         echo $json;
