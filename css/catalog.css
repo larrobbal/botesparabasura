@@ -250,7 +250,7 @@ a.article:hover {
   border-collapse:separate;
   border-spacing:0 15px;
 }
-.modal-content .modal-body #container-modal .row #info-modal-product.table-modal-product
+.table-modal-product tr td
 {
   font-size: 1rem;
 }
@@ -283,7 +283,7 @@ a.article:hover {
 @media (min-width: 992px) {
   .product .caption span 
   {
-    font-size: 18px;
+    font-size: 1.2rem;
     color: #000;
     line-height: 1;
   }

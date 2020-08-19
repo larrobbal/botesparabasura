@@ -32,7 +32,7 @@
   margin: 0.1em 0;
   text-align: center;
   line-height: 40px;
-  font-size: 17px;
+  font-size: 14px;
   background: #8e8e93;
   color: #fff;
   position: relative;
@@ -55,6 +55,7 @@
 }
 .cb-link .icon {
   margin: 0 !important;
+  font-size: 1.1rem;
 }
 .left .cb-link:hover,
 .left .cb-link:focus,

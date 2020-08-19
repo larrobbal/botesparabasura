@@ -219,7 +219,7 @@ function loadProducts(subcategory,name)
         {
             var divElement = document.createElement('div');
             divElement.setAttribute('class','col-sm-6 col-md-4 col-lg-3 col-xl-3 my-3');
-            divElement.innerHTML='<div class="product tumbnail thumbnail-3"><a class="catalog-product" id="'+element.idProducto+'" href="#" onclick="catalog(event,this,\''+element.nombreProducto+'\');" data-toggle="modal" data-target="#modal-product"><img class="img-fluid h-100 rounded catalog-item" src="assets/img/catalog/product/'+element.imagenProducto+'.jpg" alt="'+element.nombreProducto+'"></a><div class="caption"><span>'+element.nombreProducto+'</span> </div></div>';
+            divElement.innerHTML='<div class="product tumbnail thumbnail-3"><a class="catalog-product" id="'+element.idProducto+'" href="#" onclick="catalog(event,this,\''+element.nombreProducto+'\');" data-toggle="modal" data-target="#modal-product"><img class="img-fluid h-100 rounded catalog-item" src="assets/img/catalog/product/'+element.imagenProducto+'.jpg" alt="'+element.nombreProducto+'"></a><div class="caption"><span>'+element.nombreProducto+'</span></div></div>';
             catalog.appendChild(divElement);
         });
      })
@@ -264,7 +264,21 @@ function showModal(idproducto,name)
             {
                 if(i!='imagen')
                 {
-                    aux=aux+'<tr><td>'+heading[cont]+'</td><td>'+element[i]+'</td></tr><tr><td>';
+                    if(element[i]!='')
+                    {
+                        if(i=='capacidad')
+                        {
+                            aux=aux+'<tr><td>'+heading[cont]+'</td><td>'+element[i]+' LT</td></tr><tr><td>';
+                        }
+                        else if((i.includes('alto')||i.includes('ancho')||i.includes('largo')||i.includes('diametro'))&&element[i]!='')
+                        {
+                            aux=aux+'<tr><td>'+heading[cont]+'</td><td>'+element[i]+' cm</td></tr><tr><td>';
+                        }
+                        else
+                            aux=aux+'<tr><td>'+heading[cont]+'</td><td>'+element[i]+'</td></tr><tr><td>';
+                    }
+                    else
+                        aux=aux+'<tr><td>'+heading[cont]+'</td><td> - </td></tr><tr><td>';
                     cont+=1;
                 }
             }

@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 /*!
 * Start Bootstrap - Agency v6.0.2 (https://startbootstrap.com/template-overviews/agency)
 * Copyright 2013-2020 Start Bootstrap
@@ -61,13 +63,14 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1;
   color: #212529;
   text-align: left;
   background-color: #fff;
+  width: 100vw;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -361,7 +364,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -9935,8 +9938,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media print {
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     text-shadow: none !important;
     box-shadow: none !important;
   }
@@ -9954,7 +9957,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
 
   pre,
-blockquote {
+  blockquote {
     border: 1px solid #adb5bd;
     page-break-inside: avoid;
   }
@@ -9964,19 +9967,19 @@ blockquote {
   }
 
   tr,
-img {
+  img {
     page-break-inside: avoid;
   }
 
   p,
-h2,
-h3 {
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
 
   h2,
-h3 {
+  h3 {
     page-break-after: avoid;
   }
 
@@ -10003,12 +10006,12 @@ h3 {
     border-collapse: collapse !important;
   }
   .table td,
-.table th {
+  .table th {
     background-color: #fff !important;
   }
 
   .table-bordered th,
-.table-bordered td {
+  .table-bordered td {
     border: 1px solid #dee2e6 !important;
   }
 
@@ -10016,9 +10019,9 @@ h3 {
     color: inherit;
   }
   .table-dark th,
-.table-dark td,
-.table-dark thead th,
-.table-dark tbody + tbody {
+  .table-dark td,
+  .table-dark thead th,
+  .table-dark tbody + tbody {
     border-color: #dee2e6;
   }
 
@@ -10037,6 +10040,7 @@ p {
 
 .page-section {
   padding: 6rem 0;
+  width: 100vw;
 }
 .page-section h2.section-heading {
   font-size: 2.5rem;
@@ -10081,7 +10085,7 @@ img::-moz-selection {
 
 .btn-xl {
   padding: 1.25rem 2.5rem;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
 }
@@ -10127,7 +10131,7 @@ img::-moz-selection {
   color: #000;
   letter-spacing: 0.0625em;
   font-weight: 500;
-  text-align: right;
+  text-align: center;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover{
   color: #009e99;
@@ -10218,6 +10222,7 @@ img::-moz-selection {
       width: 100%;
       color: #000;
       font-size: 25px;
+      font-family: 'Quicksand', sans-serif;
       text-decoration: none;
       background-color: #FFF;
       border-radius: 5px;
@@ -10290,7 +10295,7 @@ img::-moz-selection {
       padding: 5px 10px;
       width: 100%;
       color: #000;
-      font-size: 18px;
+      font-size: 16px;
       text-decoration: none;
       background-color: #FFF;
       border-radius: 5px;

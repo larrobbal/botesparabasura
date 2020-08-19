@@ -13,6 +13,7 @@
     transition: box-shadow 0.2s;
     cursor: pointer;
     overflow: hidden;
+    z-index: 1024;
 }
 
 .floating-wpp .floating-wpp-button img,
@@ -49,6 +50,7 @@
     opacity: 0;
     transition: bottom 0.1s ease-out, opacity 0.2s ease-out;
     transform-origin: bottom;
+    z-index: 1024;
 }
 
 .floating-wpp .floating-wpp-popup.active {
@@ -58,6 +60,7 @@
     bottom: 82px;
     opacity: 1;
     right: .1rem;
+    z-index: 1024;
 }
 
 .floating-wpp .floating-wpp-popup .floating-wpp-message {
